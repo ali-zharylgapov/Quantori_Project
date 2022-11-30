@@ -29,5 +29,6 @@ def convert_dna_to_rna(dna: str) -> str:
         return rna
 
 
-user_input = input('Enter DNA sequence: ')
-print(convert_dna_to_rna(user_input))
+if __name__ == '__main__':
+    user_input = input('Enter DNA sequence: ')
+    print(convert_dna_to_rna(user_input))

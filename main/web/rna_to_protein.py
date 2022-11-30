@@ -30,5 +30,6 @@ def convert_rna_to_protein(rna: str) -> str:
         return protein
 
 
-user_input = input('Enter RNA sequence: ')
-print(convert_rna_to_protein(user_input))
+if __name__ == '__main__':
+    user_input = input('Enter DNA sequence: ')
+    print(convert_rna_to_protein(user_input))
