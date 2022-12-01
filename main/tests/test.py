@@ -1,8 +1,8 @@
 import unittest
 
-from main.web.app import app
-from main.web.dna_to_rna import convert_dna_to_rna
-from main.web.rna_to_protein import convert_rna_to_protein
+from app import app
+from dna_to_rna import convert_dna_to_rna
+from rna_to_protein import convert_rna_to_protein
 
 
 class TestDNAToRna(unittest.TestCase):
@@ -23,28 +23,28 @@ class TestDNAToRna(unittest.TestCase):
 
     def test_3(self):
         data = 'CAGGTGGTGTTGTTCAGTT'
-        expected = 'GUUGUAAUGGCCUACAUUA'
+        expected = 'CAGGUGGUGUUGUUCAGUU'
         actual = convert_dna_to_rna(data)
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
     def test_4(self):
         data = 'GCTAACTAAC'
-        expected = 'CUAACUAAC'
+        expected = 'GCUAACUAAC'
         actual = convert_dna_to_rna(data)
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
     def test_5(self):
         data = 'GCTAACTAAC'
-        expected = 'CUAACUAAC'
+        expected = 'GCUAACUAAC'
         actual = convert_dna_to_rna(data)
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
     def test_6(self):
-        data = 'TATGAAAAACTCAAA'
-        expected = 'UAUGAAAAACUCAAA'
+        data = 'GCTAACTAACATCTTTGGCACTGTT'
+        expected = 'GCUAACUAACAUCUUUGGCACUGUU'
         actual = convert_dna_to_rna(data)
 
         self.assertTrue(actual == expected, f'Should be {expected}')
