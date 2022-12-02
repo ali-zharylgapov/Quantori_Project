@@ -14,7 +14,7 @@ docker compose up -d --build
 
 ### Commands:
 
-First, to create and seed "DNA", "RNA" and "Amino Acids" tables with initial data run:
+First, to create the database and seed the tables with initial data run:
 
 ```
 docker compose run web python init.py create_seed_db
