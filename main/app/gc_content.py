@@ -29,5 +29,5 @@ def gc_content(dna: str, step: int = 100):
 
 
 doc = open('GC_content/GC_content_input.fna', 'r').read().splitlines()
-sars_1 = ''.join(doc)
-gc_content(sars_1)
+dna_sequence = ''.join(doc)
+gc_content(dna_sequence)
