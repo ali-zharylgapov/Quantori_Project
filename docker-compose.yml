@@ -3,10 +3,10 @@ version: "3.8"
 services:
   web:
     container_name: flask
-    build: ./main/web
+    build: ./main/app
     command: python init.py run -h 0.0.0.0
     volumes:
-      - ./main/web/:/usr/src/app/
+      - ./main/app/:/usr/src/app/
     environment:
       - PYTHONUNBUFFERED=0
     ports:
