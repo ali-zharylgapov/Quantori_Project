@@ -27,11 +27,6 @@ def gc_content(dna: str, step: int = 100):
     plt.savefig('GC_content/GC-content_ratio.jpg')
 
 
-# user_input = input('Enter DNA sequence: ')
-# print(f'This is user input: \n {user_input} ')
-# gc_content(user_input)
-
-
 doc = open('GC_content/GC_content_input.fna', 'r').read().splitlines()
 sars_1 = ''.join(doc)
 gc_content(sars_1)
