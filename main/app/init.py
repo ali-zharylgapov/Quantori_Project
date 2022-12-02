@@ -1,12 +1,31 @@
-from app import app, db
+import psycopg2
 from flask.cli import FlaskGroup
+
+from app import app, db
 from models import DNA, RNA, Codons, Amino
 
 cli = FlaskGroup(app)
 
 
-@cli.command("seed_db")
-def seed_db():
+@cli.command("create_seed_db")
+def create_seed_db():
+
+    conn = psycopg2.connect(
+        database="postgres",
+        user="postgres",
+        password="postgres",
+        host="db",
+        port="5432"
+    )
+
+    conn.autocommit = True
+
+    cursor = conn.cursor()
+
+    sql = '''CREATE DATABASE test_1_db'''
+    cursor.execute(sql)
+    print('Database created successfully')
+
     with app.app_context():
         db.create_all()
 
@@ -115,6 +134,10 @@ def seed_db():
         db.session.add_all([codon_1, codon_2, codon_3, codon_4, codon_5, codon_6, codon_7, codon_8, codon_9, codon_10, codon_11, codon_12, codon_13, codon_14, codon_15, codon_16, codon_17, codon_18, codon_19, codon_20, codon_21, codon_22, codon_23, codon_24, codon_25, codon_26, codon_27, codon_28, codon_29, codon_30, codon_31, codon_32, codon_33, codon_34, codon_35, codon_36, codon_37, codon_38, codon_39, codon_40, codon_41, codon_42, codon_43, codon_44, codon_45, codon_46, codon_47, codon_48, codon_49, codon_50, codon_51, codon_52, codon_53, codon_54, codon_55, codon_56, codon_57, codon_58, codon_59, codon_60, codon_61, codon_62, codon_63, codon_64])
 
         db.session.commit()
+
+        print('Database seeded successfully')
+
+        conn.close()
 
 
 if __name__ == "__main__":
