@@ -5,8 +5,8 @@ from models import DNA, RNA, Codons, Amino
 cli = FlaskGroup(app)
 
 
-@cli.command("create_seed_db")
-def create_seed_db():
+@cli.command("seed_db")
+def seed_db():
     with app.app_context():
         db.create_all()
 
