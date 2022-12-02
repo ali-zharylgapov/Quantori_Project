@@ -29,5 +29,9 @@ def gc_content(dna: str, step: int = 100):
 
 
 doc = open('GC_content/GC_content_input.fna', 'r').read().splitlines()
-dna_sequence = ''.join(doc)
+if doc[0].startswith('>NC'):
+    dna_sequence = ''.join(doc[1:])
+else:
+    dna_sequence = ''.join(doc)
+
 gc_content(dna_sequence)
