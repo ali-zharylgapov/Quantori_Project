@@ -1,15 +1,5 @@
-import psycopg2
 from data.app import app
-
-conn = psycopg2.connect(
-    database="test_1_db",
-    host="db",
-    user="postgres",
-    password="postgres",
-    port="5432"
-        )
-
-cursor = conn.cursor()
+from conn import conn, cursor
 
 
 def convert_rna_to_protein(rna: str) -> str:
@@ -32,4 +22,5 @@ def convert_rna_to_protein(rna: str) -> str:
 
 if __name__ == '__main__':
     user_input = input('Enter RNA sequence: ')
-    print(convert_rna_to_protein(user_input))
+    protein = convert_rna_to_protein(user_input)
+    print(f'Protein sequence is: {protein}')

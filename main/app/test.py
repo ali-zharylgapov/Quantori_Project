@@ -10,6 +10,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'ATTTGGCTACTAACAATCTA'
         expected = 'AUUUGGCUACUAACAAUCUA'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_1 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -17,6 +19,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'GTTGTAATGGCCTACATTA'
         expected = 'GUUGUAAUGGCCUACAUUA'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_2 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -24,6 +28,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'CAGGTGGTGTTGTTCAGTT'
         expected = 'CAGGUGGUGUUGUUCAGUU'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_3 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -31,6 +37,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'GCTAACTAAC'
         expected = 'GCUAACUAAC'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_4 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -38,6 +46,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'GCTAACTAAC'
         expected = 'GCUAACUAAC'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_5 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -45,6 +55,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'GCTAACTAACATCTTTGGCACTGTT'
         expected = 'GCUAACUAACAUCUUUGGCACUGUU'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_6 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -52,6 +64,8 @@ class TestDNAToRna(unittest.TestCase):
         data = 'CCCGTCCTTGATTGGCTTGAAGAGAAGTTT'
         expected = 'CCCGUCCUUGAUUGGCUUGAAGAGAAGUUU'
         actual = convert_dna_to_rna(data)
+        if actual == expected:
+            print('DNA Test_7 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -62,6 +76,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'AUUUGGCUACUAACAAUCUA'
         expected = 'IWLLTI'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_1 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -69,6 +85,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'GUUGUAAUGGCCUACAUUA'
         expected = 'VVMAYI'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_2 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -76,6 +94,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'CAGGUGGUGUUGUUCAGUU'
         expected = 'QVVLFS'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_3 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -83,6 +103,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'GCUAACUAAC'
         expected = 'AN.'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_4 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -90,6 +112,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'GCUAACUAACAUCUUUGGCACUGUU'
         expected = 'AN.HLWHC'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_5 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -97,6 +121,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'UAUGAAAAACUCAAA'
         expected = 'YEKLK'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_6 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 
@@ -104,6 +130,8 @@ class TestRNAtoProtein(unittest.TestCase):
         data = 'CCCGUCCUUGAUUGGCUUGAAGAGAAGUUU'
         expected = 'PVLDWLEEKF'
         actual = convert_rna_to_protein(data)
+        if actual == expected:
+            print('RNA Test_7 Passed')
 
         self.assertTrue(actual == expected, f'Should be {expected}')
 

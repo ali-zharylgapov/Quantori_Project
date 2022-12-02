@@ -24,7 +24,7 @@ def create_seed_db():
 
     sql = '''CREATE DATABASE test_1_db'''
     cursor.execute(sql)
-    print('Database created successfully')
+    print('Database "test_1_db" created successfully')
 
     with app.app_context():
         db.create_all()
@@ -135,7 +135,7 @@ def create_seed_db():
 
         db.session.commit()
 
-        print('Database seeded successfully')
+        print('Database "test_1_db" seeded successfully')
 
         conn.close()
 
