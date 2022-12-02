@@ -1,8 +1,8 @@
 import unittest
 
-from main.app.app import app
-from main.app.dna_to_rna import convert_dna_to_rna
-from main.app.rna_to_protein import convert_rna_to_protein
+from ..app.app import app
+from ..app.dna_to_rna import convert_dna_to_rna
+from ..app.rna_to_protein import convert_rna_to_protein
 
 
 class TestDNAToRna(unittest.TestCase):

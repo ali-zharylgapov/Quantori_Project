@@ -1,8 +1,8 @@
-# Quantori_Project
+# Quantori Project
 
 ### About
 
-Application that mimics DNA transcription and translation processes. 
+Application that mimics DNA transcription and translation.
 
 ### Docker:
 
@@ -35,7 +35,7 @@ docker compose run web python rna_to_protein.py
 ```
 
 <br />
-To create GC-content graph in .jpg format run:
+To create GC-content graph in .jpg format enter your data in "/GC_content/GC_content_input.fna" file and run:
 
 ```
 docker compose run web python gc_content.py
