@@ -25,6 +25,7 @@ def gc_content(dna: str, step: int = 100):
     plt.ylabel('GC-ratio(%)')
     plt.title('GC_content ratio')
     plt.savefig('GC_content/GC-content_ratio.jpg')
+    print('GC-ratio graph is saved at "GC_content/GC-content_ratio.jpg"')
 
 
 doc = open('GC_content/GC_content_input.fna', 'r').read().splitlines()

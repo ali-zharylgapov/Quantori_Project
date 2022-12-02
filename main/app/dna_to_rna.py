@@ -1,5 +1,5 @@
 import psycopg2
-from app import app
+from data.app import app
 
 conn = psycopg2.connect(
     database="test_1_db",

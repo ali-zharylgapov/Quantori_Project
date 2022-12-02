@@ -17,7 +17,7 @@ docker compose up -d --build
 First, to create the database and seed the tables with initial data run:
 
 ```
-docker compose run web python init.py create_seed_db
+docker compose run web python data/init.py create_seed_db
 ```
 
 <br />
@@ -35,7 +35,7 @@ docker compose run web python rna_to_protein.py
 ```
 
 <br />
-To create GC-content graph in .jpg format enter your data in "/GC_content/GC_content_input.fna" file and run:
+To create GC-content graph in .jpg format put your data in "GC_content_input.fna" file and run:
 
 ```
 docker compose run web python gc_content.py
