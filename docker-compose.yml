@@ -3,10 +3,10 @@ version: "3.8"
 services:
   web:
     container_name: flask
-    build: ./main/app
+    build: ./app
     command: python init.py run -h 0.0.0.0
     volumes:
-      - ./main/app/:/usr/src/app/
+      - ./app/:/usr/src/app/
     environment:
       - PYTHONUNBUFFERED=0
     ports:
@@ -27,7 +27,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=test_1_db
+      - POSTGRES_DB=new_database_db
 
 volumes:
   postgres_data:
